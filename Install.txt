@@ -1,0 +1,10 @@
+1. Disable Splunk File Integrity Check by editing the limits.conf located in /opt/splunk/etc/system/default/
+	Search for: installed_files_integrity = enabled
+	Change to: installed_files_integrity = disabled
+
+2. Disable Splunk Automatic checking for new versions by editing the web.conf located in /opt/splunk/etc/system/default/
+	Search for: updateCheckerBaseURL = https://quickdraw.splunk.com/js/
+	Change to: updateCheckerBaseURL = 0
+
+3. Start the splunkd service [/opt/splunk/bin/splunk start]
+4. Login and install included splunk-enterprise.lic [Settings => Licensing => Add License => splunk-enterprise.lic => Restart Splunk ...
